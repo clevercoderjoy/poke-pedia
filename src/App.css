@@ -1,38 +1,380 @@
-.App {
-  text-align: center;
+/* font import */
+
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+/* global css variables */
+
+:root{
+    --font-one: 'ZCOOL KuaiLe', cursive;
+    --font-two: 'Rampart One', cursive;
+    --poke-red: #FF0000;
+    --poke-yellow: #ffcb05;
+    --poke-blue: #2a75bb;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background: var(--poke-yellow);
+    user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* tag h1 */
+
+h1{
+    font-family: var(--font-two);
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: auto;
+    border: 4px solid var(--poke-red);
+    background: var(--poke-yellow);
+    color: var(--poke-blue);
+    display: block;
+    width: 45%;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* h1 => hover */
+
+h1:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 4px solid var(--poke-red);
+    color: var(--poke-yellow);
 }
 
-.App-link {
-  color: #61dafb;
+/* tag h2 */
+
+h2{
+    font-family: var(--font-two);
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem auto;
+    color: var(--poke-blue);
+    display: flex;
+    border-radius: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading-pokemon{
+    text-align: center;
+    color: var(--poke-blue);
+    border: 2px solid var(--poke-red);
+    display: flex;
+    margin: auto;
+    margin-top: 3rem;
+    justify-content: center;
+    width: 20%;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.heading-pokemon:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 2px solid var(--poke-red);
+    color: var(--poke-yellow);
+}
+
+.heading-emoji{
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.poke-box{
+    text-align: center;
+    margin: auto;
+    border: 2px solid var(--poke-red);
+    border-radius: 5px;
+    justify-content: center;
+    display: block;
+    width: 50%;
+    height: 35rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll-bar{
+    overflow:hidden;
+    overflow-y:scroll;
+}
+
+.poke-box:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-yellow);
+    border: 2px solid var(--poke-red);
+    color: var(--poke-red);
+}
+
+.poke-name{
+    text-align: center;
+    margin: 0.5rem;
+    display: inline-block;
+    cursor: pointer;
+    font-family: var(--font-two);
+    font-weight: bold;
+    color: var(--poke-blue);
+    font-size: 22px;
+}
+
+.op{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--poke-red);
+    color: var(--poke-blue);
+    border-radius: 0.5rem;
+    background: var(--poke-yellow);
+    display: flex;
+    width: 20%;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.op:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 2px solid var(--poke-red);
+    color: var(--poke-yellow);
+}
+
+.pokemon-type{
+    text-align: center;
+    margin: 1.5rem auto;
+    border: 2px solid var(--poke-red);
+    border-radius: 5px;
+    justify-content: center;
+    display: block;
+    width: 20%;
+    height: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-family: var(--font-one);
+    color: var(--poke-blue);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pokemon-type:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 2px solid var(--poke-red);
+    color: var(--poke-yellow);
+}
+
+.pokemon-name{
+    text-align: center;
+    margin: 0.5rem auto;
+    border: 2px solid var(--poke-red);
+    border-radius: 5px;
+    justify-content: center;
+    display: block;
+    width: 20%;
+    height: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-family: var(--font-one);
+    color: var(--poke-blue);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pokemon-name:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 2px solid var(--poke-red);
+    color: var(--poke-yellow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* template applied */
+
+/* class about*/
+
+.about{
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 1rem;
+    font-family: var(--font-two);
+    color: var(--poke-blue);
+}
+
+/* class app */
+
+.app{
+    text-align: center;
+    justify-content: center;
+    display: block;
+    font-weight: bold;
+    font-family: var(--font-one);
+    color: var(--poke-blue);
+    margin: 0.5rem;
+}
+
+/* link color */
+
+.social-link{
+    color: var(--poke-blue);
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* source */
+
+.source{
+    text-align: center;
+    margin: 0.5rem auto;
+    background: transparent;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--poke-blue);
+    border-radius: 0.3rem;
+    font-weight: bold;
+    display: inline-block;
+    font-family: var(--font-one);
+    color: var(--poke-blue);
+    background: var(--poke-yellow);
+    transition: all 0.3s ease-in-out;
+}
+
+/* class btn */
+
+.btn-source{
+    text-align: center;
+    margin: 1rem;
+}
+
+/* button (source) => hover */
+.source:hover{
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    background: var(--poke-blue);
+    border: 1.5px solid var(--poke-red);
+    color: var(--poke-yellow);
+}
+
+/* class social */
+
+.social{
+    list-style-type: none;
+    margin: 0 auto;
+    text-align: center;
+	padding: 0.5rem 0.5rem;
+    justify-content: center;
+}
+
+/* class social-list */
+
+.social-list{
+    display: inline-block;
+    margin: 0.2rem 1rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+/* social link color on hover */
+
+i.fa.fa-linkedin.fa-1x:hover {
+    color: #0077b5;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-github.fa-1x:hover {
+    color: #171515 ;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-stack-overflow.fa-1x:hover {
+    color: #ef8236;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-twitter.fa-1x:hover {
+    color: #00acee ;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-whatsapp.fa-1x:hover {
+    color: 	#075E54;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+i.fa.fa-instagram.fa-1x:hover {
+    color: 	#C13584;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    background: all black;
+}
+
+/* copyright */
+
+.copyright{
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    margin: 1rem;
+    border: 2px solid var(--poke-blue);
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.5rem;
+    background: var(--poke-yellow);
+    transition: all 0.3s ease-in-out;
+    color: var(--poke-blue);
+    font-family: var(--font-one);
+}
+
+.copyright:hover{
+    background: var(--poke-blue);
+    color: var(--poke-yellow);
+    border: 1.5px solid var(--poke-red);
+    transition: all 0.3s ease-in-out;
+}
+
+.cr{
+    text-align: center;
 }
